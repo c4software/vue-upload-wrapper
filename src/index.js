@@ -1,4 +1,4 @@
-import UploadWrapper from "./component/upload-wrapper";
+import UploadWrapper from "./component/upload-wrapper.vue";
 
 export default {
   install(Vue) {
