@@ -1,8 +1,4 @@
-'use strict';
-
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-var __vue_normalize__ = _interopDefault(require('vue-runtime-helpers/dist/normalize-component.js'));
+import __vue_normalize__ from 'vue-runtime-helpers/dist/normalize-component.js';
 
 //
 //
@@ -82,4 +78,4 @@ var vueUploadWrapper = __vue_normalize__({
   staticRenderFns: __vue_staticRenderFns__
 }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, undefined, undefined);
 
-module.exports = vueUploadWrapper;
+export default vueUploadWrapper;

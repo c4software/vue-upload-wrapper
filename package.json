@@ -7,26 +7,24 @@
   "browser": "dist/vue-upload-wrapper.min.js",
   "dependencies": {},
   "devDependencies": {
-    "bili": "^3.1.2",
-    "eslint": "^5.7.0",
+    "bili": "^4.7.1",
+    "eslint": "^5.15.3",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-vue": "^4.7.1",
-    "rollup-plugin-vue": "^4.3.2",
-    "vue": "^2.5.17",
-    "vue-template-compiler": "^2.5.17"
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "rollup-plugin-vue": "^4.7.2",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
   },
   "scripts": {
     "build": "npm run build:module && npm run build:browser",
-    "build:module": "NODE_ENV=production bili --format cjs,es --plugin vue",
-    "build:browser": "NODE_ENV=production bili --format umd,umd-min --module-name vue-upload-wrapper --external vue --global.vue \"Vue\" --plugin vue",
+    "build:module": "NODE_ENV=production bili src/vue-upload-wrapper.vue --format cjs,es --module-name vue-upload-wrapper",
+    "build:browser": "NODE_ENV=production bili src/vue-upload-wrapper.vue --format umd,umd-min --module-name vue-upload-wrapper --external vue --global.vue \"Vue\"",
     "lint": "eslint --ext js --ext vue src",
-    "lint:fix": "npm run lint -- --fix",
-    "prepublish": "npm run build"
+    "lint:fix": "npm run lint -- --fix"
   },
   "peerDependencies": {
-    "vue": "*",
-    "vuetify": "*"
+    "vue": "*"
   },
   "repository": {
     "type": "git",
