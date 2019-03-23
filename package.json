@@ -1,10 +1,10 @@
 {
   "name": "vue-upload-wrapper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Transform any element into an file selector",
-  "main": "dist/vue-upload-wrapper.cjs.js",
-  "module": "dist/vue-upload-wrapper.es.js",
-  "browser": "dist/vue-upload-wrapper.min.js",
+  "main": "dist/vue-upload-wrapper.js",
+  "module": "dist/vue-upload-wrapper.mjs.js",
+  "browser": "dist/vue-upload-wrapper.umd.min.js",
   "dependencies": {},
   "devDependencies": {
     "bili": "^4.7.1",
