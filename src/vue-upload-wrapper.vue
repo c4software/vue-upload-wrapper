@@ -13,9 +13,17 @@
 <script>
 export default {
   name: "vue-upload-wrapper",
+  props: {
+    disabled: {
+      type: Boolean,
+      default: false
+    }
+  },
   methods: {
     triggerFileSelection() {
-      this.$refs.file.click();
+      if (!this.disabled) {
+        this.$refs.file.click();
+      }
     },
     emitSelection() {
       this.$emit("fileSelected", this.$refs.file.files);

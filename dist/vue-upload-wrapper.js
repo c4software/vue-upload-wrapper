@@ -18,9 +18,17 @@ var __vue_normalize__ = _interopDefault(require('vue-runtime-helpers/dist/normal
 //
 var script = {
   name: "vue-upload-wrapper",
+  props: {
+    disabled: {
+      type: Boolean,
+      default: false
+    }
+  },
   methods: {
     triggerFileSelection: function triggerFileSelection() {
-      this.$refs.file.click();
+      if (!this.disabled) {
+        this.$refs.file.click();
+      }
     },
     emitSelection: function emitSelection() {
       this.$emit("fileSelected", this.$refs.file.files);
