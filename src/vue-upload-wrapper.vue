@@ -4,6 +4,7 @@
       @change="emitSelection"
       ref="file"
       type="file"
+      :accept="accept.join(',')"
       v-show="false"
     />
     <slot />
@@ -14,6 +15,10 @@
 export default {
   name: "vue-upload-wrapper",
   props: {
+    accept: {
+      type: Array,
+      default: []
+    },
     disabled: {
       type: Boolean,
       default: false

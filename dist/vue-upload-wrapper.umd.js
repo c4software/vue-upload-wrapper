@@ -16,9 +16,14 @@
   //
   //
   //
+  //
   var script = {
     name: "vue-upload-wrapper",
     props: {
+      accept: {
+        type: Array,
+        default: []
+      },
       disabled: {
         type: Boolean,
         default: false
@@ -145,7 +150,8 @@
       }],
       ref: "file",
       attrs: {
-        "type": "file"
+        "type": "file",
+        "accept": _vm.accept.join(',')
       },
       on: {
         "change": _vm.emitSelection

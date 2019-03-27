@@ -12,9 +12,14 @@ import __vue_normalize__ from 'vue-runtime-helpers/dist/normalize-component.js';
 //
 //
 //
+//
 var script = {
   name: "vue-upload-wrapper",
   props: {
+    accept: {
+      type: Array,
+      default: []
+    },
     disabled: {
       type: Boolean,
       default: false
@@ -56,7 +61,8 @@ var __vue_render__ = function __vue_render__() {
     }],
     ref: "file",
     attrs: {
-      "type": "file"
+      "type": "file",
+      "accept": _vm.accept.join(',')
     },
     on: {
       "change": _vm.emitSelection
