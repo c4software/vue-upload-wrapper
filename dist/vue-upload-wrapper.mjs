@@ -18,7 +18,9 @@ var script = {
   props: {
     accept: {
       type: Array,
-      default: []
+      default: function _default() {
+        return [];
+      }
     },
     disabled: {
       type: Boolean,
