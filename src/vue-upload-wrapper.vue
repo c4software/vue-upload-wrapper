@@ -4,6 +4,7 @@
       @change="emitSelection"
       ref="file"
       type="file"
+      :multiple='multiple'
       :accept="accept.join(',')"
       v-show="false"
     />
@@ -22,6 +23,10 @@ export default {
       }
     },
     disabled: {
+      type: Boolean,
+      default: false
+    },
+    multiple: {
       type: Boolean,
       default: false
     }

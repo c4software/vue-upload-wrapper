@@ -2,8 +2,9 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
   (global = global || self, global['vue-upload-wrapper'] = factory());
-}(this, function () { 'use strict';
+}(this, (function () { 'use strict';
 
+  //
   //
   //
   //
@@ -22,13 +23,17 @@
     props: {
       accept: {
         type: Array,
-        default: function _default() {
+        "default": function _default() {
           return [];
         }
       },
       disabled: {
         type: Boolean,
-        default: false
+        "default": false
+      },
+      multiple: {
+        type: Boolean,
+        "default": false
       }
     },
     methods: {
@@ -153,6 +158,7 @@
       ref: "file",
       attrs: {
         "type": "file",
+        "multiple": _vm.multiple,
         "accept": _vm.accept.join(',')
       },
       on: {
@@ -185,4 +191,4 @@
 
   return vueUploadWrapper;
 
-}));
+})));
